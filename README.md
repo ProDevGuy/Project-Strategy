@@ -1,4 +1,4 @@
-# Project-Strategy v0.0.0.0001
+# Project-Strategy v0.0.1
 Project Strategy is an open source 4X Strategy game made in Unity3D. Project strategy takes place in the Cold War era, were American and her allies must defend agaist the threat of communism from the soviet union. 
 
 ## Getting Started
@@ -11,11 +11,11 @@ These instructions will get you a copy of the project up and running on your loc
 ##### Dev Version
 ~~~
 Unity3D (unity3d.com)
-And a computer
+Linux or Windows (Sorry no Mac OS support)
 ~~~
 ##### Normal Version
 ~~~ 
-A computer
+Linux or Windows (Sorry no Mac OS support)
 ~~~
 
 ### Installing
