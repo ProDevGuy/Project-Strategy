@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 public class Selectable : MonoBehaviour {
     public bool hi;
     public cakeslice.Outline booltest;
     public string name;
-    
+    public Image panel;
     void Start()
     {
 
 
         name = gameObject.name;
-        
+        //GameObject go = GameObject.Find("Canvas");
+        //if (!go)
+            //return;
+
+        //panel = go.GetComponent<Image>();
 
         //Sets a var "g" to the current game object
         GameObject g = gameObject;
@@ -41,21 +46,25 @@ public class Selectable : MonoBehaviour {
                 {
                     
                     Debug.Log("It's working!");
-
-                    //GetComponent<cakeslice.Outline>().enabled = true;
                     booltest.eraseRenderer = false;
+                    //panel.enabled = true;
+                    panel.enabled =true;
+                    //GetComponent<cakeslice.Outline>().enabled = true;
+
                     Debug.Log("This works two");
                 }
                 else
                 {
                   Debug.Log("nopz");
                   booltest.eraseRenderer = true;
+                  panel.enabled = false;
                 }
             }
             else
             {
                 Debug.Log("No hit");
                 booltest.eraseRenderer = true;
+                panel.enabled = false;
             }
             Debug.Log("Mouse is down");
         }

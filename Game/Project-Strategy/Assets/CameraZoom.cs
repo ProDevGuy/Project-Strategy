@@ -4,9 +4,10 @@ using System.Collections;
 public class CameraZoom : MonoBehaviour
 {
 
-    public int cameraCurrentZoom = 8;
-    public int cameraZoomMax = 20;
-    public int cameraZoomMin = 5;
+    public float cameraCurrentZoom = 8;
+    public float cameraZoomMax = 20;
+    public float cameraZoomMin = 5;
+    public float cameraZoomAmount = 0.5f;
     void Start()
     {
         Camera.main.orthographicSize = cameraCurrentZoom;
@@ -17,16 +18,16 @@ public class CameraZoom : MonoBehaviour
         {
             if (cameraCurrentZoom < cameraZoomMax)
             {
-                cameraCurrentZoom += 1;
-                Camera.main.orthographicSize = Mathf.Max(Camera.main.orthographicSize + 1);
+                cameraCurrentZoom += cameraZoomAmount;
+                Camera.main.orthographicSize = Mathf.Max(Camera.main.orthographicSize + cameraZoomAmount);
             }
         }
         if (Input.GetAxis("Mouse ScrollWheel") > 0) // forward
         {
             if (cameraCurrentZoom > cameraZoomMin)
             {
-                cameraCurrentZoom -= 1;
-                Camera.main.orthographicSize = Mathf.Min(Camera.main.orthographicSize - 1);
+                cameraCurrentZoom -= cameraZoomAmount;
+                Camera.main.orthographicSize = Mathf.Min(Camera.main.orthographicSize - cameraZoomAmount);
             }
         }
     }
