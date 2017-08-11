@@ -12,7 +12,9 @@ These instructions will get you a copy of the project up and running on your loc
 ~~~
 Unity3D (unity3d.com)
 Linux or Windows (Sorry no Mac OS support)
+Note: Unity3D for linux is experimentel. You can download it below.
 ~~~
+* [Unity3D Linux](http://beta.unity3d.com/download/2b451a7da81d/public_download.html)
 ##### Normal Version
 ~~~ 
 Linux or Windows (Sorry no Mac OS support)
