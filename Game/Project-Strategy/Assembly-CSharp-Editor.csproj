@@ -51,21 +51,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\WorldMaps\Editor\Inspectors\BingMapsInspector.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\Inspectors\WMSInspector.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\ServerInfoRequesters\ServerInfoRequester.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\ServerInfoRequesters\ServerTransaction.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\ServerInfoRequesters\WMSInfoRequester.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\WMSInfo\WMSBoundingBox.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\WMSInfo\WMSInfo.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\WMSInfo\WMSLayer.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\WMSInfo\WMSServerBookmarks.cs" />
-     <Compile Include="Assets\WorldMaps\Editor\WMSInfo\WMSXMLParser.cs" />
-     <None Include="Assets\OutlineEffect\Resources\OutlineShader.shader" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\Inspectors\BingMapsInspector.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\Inspectors\WMSInspector.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\ServerInfoRequesters\ServerInfoRequester.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\ServerInfoRequesters\ServerTransaction.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\ServerInfoRequesters\WMSInfoRequester.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\WMSInfo\WMSBoundingBox.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\WMSInfo\WMSInfo.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\WMSInfo\WMSLayer.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\WMSInfo\WMSServerBookmarks.cs" />
+     <Compile Include="Assets\Proprietarty Assets\WorldMaps\Editor\WMSInfo\WMSXMLParser.cs" />
+     <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineShader.shader" />
      <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
-     <None Include="Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />
-     <None Include="Assets\OutlineEffect\Resources\OutlineBufferCullOffShader.shader" />
-     <None Include="Assets\ToonSoldiers_WW2_demo\ToonSoldiers_WW2_demo_README.txt" />
+     <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />
+     <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineBufferCullOffShader.shader" />
+     <None Include="Assets\Proprietarty Assets\Readme.txt" />
+     <None Include="Assets\Proprietarty Assets\ToonSoldiers_WW2_demo\ToonSoldiers_WW2_demo_README.txt" />
      <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>/home/eli/Documents/Project-Strategy/Project-Strategy/Game/Project-Strategy/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>

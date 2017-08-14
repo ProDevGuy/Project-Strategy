@@ -7,7 +7,7 @@ public class Selectable : MonoBehaviour {
     public bool hi;
     public cakeslice.Outline booltest;
     public string name;
-    public Image panel;
+    public GameObject panel;
     void Start()
     {
 
@@ -48,7 +48,7 @@ public class Selectable : MonoBehaviour {
                     Debug.Log("It's working!");
                     booltest.eraseRenderer = false;
                     //panel.enabled = true;
-                    panel.enabled =true;
+                    panel.SetActive(true);
                     //GetComponent<cakeslice.Outline>().enabled = true;
 
                     Debug.Log("This works two");
@@ -57,14 +57,14 @@ public class Selectable : MonoBehaviour {
                 {
                   Debug.Log("nopz");
                   booltest.eraseRenderer = true;
-                  panel.enabled = false;
+                  panel.SetActive(true);
                 }
             }
             else
             {
                 Debug.Log("No hit");
                 booltest.eraseRenderer = true;
-                panel.enabled = false;
+                panel.SetActive(false);
             }
             Debug.Log("Mouse is down");
         }
