@@ -11,14 +11,18 @@ These instructions will get you a copy of the project up and running on your loc
 ##### Dev Version
 ~~~
 Unity3D (unity3d.com)
-Linux or Windows (Sorry no Mac OS support)
+Linux,Windows or Mac OS
 Note: Unity3D for linux is experimentel. You can download it below.
 ~~~
 * [Unity3D Linux](http://beta.unity3d.com/download/2b451a7da81d/public_download.html)
 ##### Normal Version
 ~~~ 
-Linux or Windows (Sorry no Mac OS support)
+Linux or Windows (See below)
 ~~~
+##### Mac OS Users
+
+Mac OS support is a planned feture. 
+[See Issues](https://github.com/EPrograming/Project-Strategy/issues/11)
 
 ### Installing
 
