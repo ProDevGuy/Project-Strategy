@@ -17,8 +17,12 @@ Note: Unity3D for linux is experimentel. You can download it below.
 * [Unity3D Linux](http://beta.unity3d.com/download/2b451a7da81d/public_download.html)
 ##### Normal Version
 ~~~ 
-Linux or Windows (See [Issues](https://github.com/EPrograming/Project-Strategy/issues/11)
+Linux or Windows (See below)
 ~~~
+##### Mac OS Users
+
+Mac OS support is a planned feture. 
+[See Issues](https://github.com/EPrograming/Project-Strategy/issues/11)
 
 ### Installing
 
