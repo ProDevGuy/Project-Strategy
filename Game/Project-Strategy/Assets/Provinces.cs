@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 public class Provinces : MonoBehaviour {
 
 	string path;
 	string jsonString;
+	public Text provinceNameText;
+	public Text provinceOwnerText;
 
 
 	void Start(){
 		path = Application.streamingAssetsPath + "/Provinces/Province.json";
 		jsonString = File.ReadAllText(path);
-		Province IRELAND = jsonUtility.FromJson<Province>(jsonString);
+		Province IRELAND = JsonUtility.FromJson<Province>(jsonString);
 		Debug.Log(IRELAND.name);
+		provinceNameText = provinceNameText.GetComponent<Text>();
+		provinceNameText.text = IRELAND.name;
 	}
 }
 
@@ -21,4 +26,5 @@ public class Provinces : MonoBehaviour {
 public class Province{
 	public int id;
 	public string name;
+	public string owner;
 }
