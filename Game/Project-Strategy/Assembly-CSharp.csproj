@@ -51,13 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraControler.cs" />
-     <Compile Include="Assets\CameraMove.cs" />
-     <Compile Include="Assets\CameraZoom.cs" />
-     <Compile Include="Assets\changeTime.cs" />
-     <Compile Include="Assets\clicker.cs" />
      <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
-     <Compile Include="Assets\MapZoom.cs" />
      <Compile Include="Assets\Proprietarty Assets\OutlineEffect\Demo\OutlineAnimation.cs" />
      <Compile Include="Assets\Proprietarty Assets\OutlineEffect\Demo\Rotate.cs" />
      <Compile Include="Assets\Proprietarty Assets\OutlineEffect\Demo\Toggle.cs" />
@@ -70,10 +64,18 @@
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Planes\PlanesFactory.cs" />
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Planes\QuadtreeLODPlane.cs" />
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Utilities\CameraMovement.cs" />
-     <Compile Include="Assets\Provinces.cs" />
-     <Compile Include="Assets\Selectable.cs" />
-     <Compile Include="Assets\SelectionBox.cs" />
-     <Compile Include="Assets\spriteChanger.cs" />
+     <Compile Include="Assets\Scripts\CameraControler.cs" />
+     <Compile Include="Assets\Scripts\CameraMove.cs" />
+     <Compile Include="Assets\Scripts\CameraZoom.cs" />
+     <Compile Include="Assets\Scripts\changeTime.cs" />
+     <Compile Include="Assets\Scripts\clicker.cs" />
+     <Compile Include="Assets\Scripts\initialization.cs" />
+     <Compile Include="Assets\Scripts\MapZoom.cs" />
+     <Compile Include="Assets\Scripts\Provinces.cs" />
+     <Compile Include="Assets\Scripts\Selectable.cs" />
+     <Compile Include="Assets\Scripts\SelectionBox.cs" />
+     <Compile Include="Assets\Scripts\spriteChanger.cs" />
+     <Compile Include="Assets\Scripts\TextChanger.cs" />
      <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineShader.shader" />
      <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
      <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />

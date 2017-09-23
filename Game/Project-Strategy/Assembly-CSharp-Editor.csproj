@@ -69,7 +69,7 @@
      <None Include="Assets\Proprietarty Assets\ToonSoldiers_WW2_demo\ToonSoldiers_WW2_demo_README.txt" />
      <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>/media/eli/58405B96405B79A8/Users/Eli Thorpe/Desktop/linux recovery/Project-Strategy/Project-Strategy/Game/Project-Strategy/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>/home/eli/Desktop/Project-Strategy/Game/Project-Strategy/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
