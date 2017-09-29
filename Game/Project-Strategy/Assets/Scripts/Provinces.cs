@@ -35,7 +35,10 @@ public class Provinces : MonoBehaviour
 			}
 			
 		}
-		
+		foreach(Province str in provinces)
+		{
+			Debug.Log(str.name);
+		}
 
 	}
 }

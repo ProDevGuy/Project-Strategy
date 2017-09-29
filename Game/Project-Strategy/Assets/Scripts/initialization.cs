@@ -31,11 +31,8 @@ public class initialization : MonoBehaviour {
 	void Start () {
 		//StartCoroutine( HandleIt() );
 		//Load();
-		/*Provinces provinces = camera.GetComponent<Provinces>();
-		foreach(Provinces str in Provinces.Instance.provinces)
-		{
-			Debug.Log(str.name);
-		}*/
+		Provinces provinces = camera.GetComponent<Provinces>();
+		
 		provIds.Add(1);
 		provIds.Add(2);
 		provIds.Add(3);
