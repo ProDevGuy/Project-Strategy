@@ -45,14 +45,8 @@ There is no current build of the game, for it is a work in progress. If you want
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/EPrograming/Project-Strategy/blob/master/CONTRIBUTING) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Built With
-
-* [Unity3d](http://www.unity3d.com) - The Game Engine
-
-
-
-###Licence
+###
+License
 
     Copyright (C) {2017}
 
@@ -68,4 +62,11 @@ Please read [CONTRIBUTING.md](https://github.com/EPrograming/Project-Strategy/bl
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+## Built With
+
+* [Unity3d](http://www.unity3d.com) - The Game Engine
+
+
 
