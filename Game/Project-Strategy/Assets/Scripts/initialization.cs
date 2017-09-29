@@ -18,6 +18,7 @@ public class initialization : MonoBehaviour {
 	public TextMesh provinceOwnerText;
 	public Text provinceNameTextUI;
 	public Text provinceOwnerTextUI;
+	public GameObject camera;
 	List<string> selection;
 	List<int> provIds = new List<int>();
 	int daInt = 1;
@@ -30,6 +31,11 @@ public class initialization : MonoBehaviour {
 	void Start () {
 		//StartCoroutine( HandleIt() );
 		//Load();
+		/*Provinces provinces = camera.GetComponent<Provinces>();
+		foreach(Provinces str in Provinces.Instance.provinces)
+		{
+			Debug.Log(str.name);
+		}*/
 		provIds.Add(1);
 		provIds.Add(2);
 		provIds.Add(3);
