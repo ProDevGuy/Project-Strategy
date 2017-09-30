@@ -64,6 +64,8 @@ License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
+## Contrubuters
+Thank you @Pjaerr for codeing help and varios images found in the game
 ## Built With
 
 * [Unity3d](http://www.unity3d.com) - The Game Engine
