@@ -45,6 +45,10 @@ There is no current build of the game, for it is a work in progress. If you want
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/EPrograming/Project-Strategy/blob/master/CONTRIBUTING) for details on our code of conduct, and the process for submitting pull requests to us.
+
+To Contribute, go to [Issues](https://github.com/EPrograming/Project-Strategy/issues) to see what needs done.
+Or visit our trello [board](https://trello.com/b/djtV6J8C/project-strategy) to see what needs done.
+
 ###
 License
 
