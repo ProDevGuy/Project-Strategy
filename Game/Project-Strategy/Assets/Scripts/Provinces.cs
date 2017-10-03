@@ -47,10 +47,10 @@ public class Provinces : MonoBehaviour
 public class Province
 {
 	public string name;
-	float[] rgb = new float[3];
-	string terrainType;
-	float prosperity;
-	string owner;
+	public float[] rgb = new float[3];
+	public string terrainType;
+	public float prosperity;
+	public string owner;
 
 	//Constructor, takes all the data that should be passed in from the provinceData object.
 	public Province(string jsonName, float[] jsonRgb, string jsonTerrainType, float jsonProsperity, string jsonOwner)

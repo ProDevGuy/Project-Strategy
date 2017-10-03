@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 572862591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b176d94bb599427a943df95431e0128, type: 3}
   m_Name: 
@@ -2817,7 +2817,7 @@ GameObject:
   - component: {fileID: 1115670757}
   - component: {fileID: 1115670756}
   m_Layer: 0
-  m_Name: Province (2)
+  m_Name: Province greenland
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2867,10 +2867,10 @@ MonoBehaviour:
   name: 
   panel: {fileID: 386528787}
   selected: 0
-  provinceNameText: {fileID: 0}
+  provinceNameText: {fileID: 1986910660}
   provinceOwnerText: {fileID: 0}
-  provinceNameTextUI: {fileID: 0}
-  provinceOwnerTextUI: {fileID: 0}
+  provinceNameTextUI: {fileID: 843368619}
+  provinceOwnerTextUI: {fileID: 2138596049}
   Name: 
   Provinces: {fileID: 0}
 --- !u!23 &1115670758
@@ -3611,7 +3611,7 @@ GameObject:
   - component: {fileID: 1371668406}
   - component: {fileID: 1371668405}
   m_Layer: 0
-  m_Name: Province (1)
+  m_Name: Province colorado
   m_TagString: Construction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3662,10 +3662,10 @@ MonoBehaviour:
   name: 
   panel: {fileID: 386528787}
   selected: 0
-  provinceNameText: {fileID: 0}
+  provinceNameText: {fileID: 1687574329}
   provinceOwnerText: {fileID: 0}
-  provinceNameTextUI: {fileID: 0}
-  provinceOwnerTextUI: {fileID: 0}
+  provinceNameTextUI: {fileID: 843368619}
+  provinceOwnerTextUI: {fileID: 2138596049}
   Name: 
   Provinces: {fileID: 0}
 --- !u!23 &1371668407
@@ -4344,7 +4344,7 @@ GameObject:
   - component: {fileID: 1742194460}
   - component: {fileID: 1742194459}
   m_Layer: 0
-  m_Name: Province (4)
+  m_Name: Province england
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4394,10 +4394,10 @@ MonoBehaviour:
   name: 
   panel: {fileID: 386528787}
   selected: 0
-  provinceNameText: {fileID: 0}
+  provinceNameText: {fileID: 406675414}
   provinceOwnerText: {fileID: 0}
-  provinceNameTextUI: {fileID: 0}
-  provinceOwnerTextUI: {fileID: 0}
+  provinceNameTextUI: {fileID: 843368619}
+  provinceOwnerTextUI: {fileID: 2138596049}
   Name: 
   Provinces: {fileID: 0}
 --- !u!23 &1742194456
@@ -4491,7 +4491,7 @@ GameObject:
   - component: {fileID: 1753733340}
   - component: {fileID: 1753733345}
   m_Layer: 0
-  m_Name: Province
+  m_Name: Province wyoming
   m_TagString: Construction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4513,10 +4513,10 @@ MonoBehaviour:
   name: 
   panel: {fileID: 386528787}
   selected: 0
-  provinceNameText: {fileID: 0}
+  provinceNameText: {fileID: 786059665}
   provinceOwnerText: {fileID: 0}
-  provinceNameTextUI: {fileID: 0}
-  provinceOwnerTextUI: {fileID: 0}
+  provinceNameTextUI: {fileID: 843368619}
+  provinceOwnerTextUI: {fileID: 2138596049}
   Name: 
   Provinces: {fileID: 0}
 --- !u!23 &1753733341
@@ -5240,7 +5240,6 @@ GameObject:
   - component: {fileID: 2139921829}
   - component: {fileID: 2139921832}
   - component: {fileID: 2139921833}
-  - component: {fileID: 2139921831}
   - component: {fileID: 2139921830}
   m_Layer: 0
   m_Name: Greenland
@@ -5279,28 +5278,6 @@ MonoBehaviour:
   eraseRenderer: 1
   originalLayer: 0
   originalMaterials: []
---- !u!114 &2139921831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2139921828}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2bbf18f70c65444997a6410bc93369d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hi: 0
-  booltest: {fileID: 0}
-  name: 
-  panel: {fileID: 0}
-  selected: 0
-  provinceNameText: {fileID: 0}
-  provinceOwnerText: {fileID: 0}
-  provinceNameTextUI: {fileID: 0}
-  provinceOwnerTextUI: {fileID: 0}
-  Name: 
-  Provinces: {fileID: 0}
 --- !u!212 &2139921832
 SpriteRenderer:
   m_ObjectHideFlags: 0

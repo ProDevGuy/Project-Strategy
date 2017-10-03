@@ -69,6 +69,9 @@ public class Selectable : MonoBehaviour {
                     if(name == "Province wales"){
                         path = Application.streamingAssetsPath + "/Provinces/Wales.json";
                     }
+                    if(name == "Province england"){
+                        path = Application.streamingAssetsPath + "/Provinces/England.json";
+                    }
                     Debug.Log(path);
                     jsonString = File.ReadAllText(path);
                     Debug.Log(jsonString);
@@ -77,6 +80,7 @@ public class Selectable : MonoBehaviour {
                     provinceNameTextUI = provinceNameTextUI.GetComponent<Text>();
                     provinceNameText.text = IRELAND.name;
                     provinceNameTextUI.text = IRELAND.name;
+                    provinceOwnerTextUI.text = IRELAND.owner;
                     Debug.Log(provinceNameTextUI.text);
                     Debug.Log(provinceNameText.text);
                     Debug.Log(IRELAND.name);
