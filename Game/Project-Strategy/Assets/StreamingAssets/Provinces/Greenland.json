@@ -1,0 +1,10 @@
+{
+	"id": "3",
+	"name": "Greenland",
+	"R":"100", "G":"0", "B":"0",
+	"terrain_type":"plains",
+	"adjacencies":[],
+	"prosperity":1.0,
+	"owner": "Denmark"
+	
+} 

@@ -72,6 +72,15 @@ public class Selectable : MonoBehaviour {
                     if(name == "Province england"){
                         path = Application.streamingAssetsPath + "/Provinces/England.json";
                     }
+                    if(name == "Province wyoming"){
+                        path = Application.streamingAssetsPath + "/Provinces/Wyoming.json";
+                    }
+                    if(name == "Province colorado"){
+                        path = Application.streamingAssetsPath + "/Provinces/Colorado.json";
+                    }
+                    if(name == "Province greenland"){
+                        path = Application.streamingAssetsPath + "/Provinces/Greenland.json";
+                    }
                     Debug.Log(path);
                     jsonString = File.ReadAllText(path);
                     Debug.Log(jsonString);
