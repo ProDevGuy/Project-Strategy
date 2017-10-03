@@ -22,7 +22,7 @@ public class changeTime : MonoBehaviour {
 
 
 	private IEnumerator HandleIt(){
-		while (timeRunning != 0){
+		if (timeRunning != 0){
 			theText = time.text;
 
 			int.TryParse(theText, out theTextint);
@@ -36,8 +36,11 @@ public class changeTime : MonoBehaviour {
 	}
 
 	public void StartStopTime(){
+		Debug.Log("this works");
 		if (timeRunning == 1){
+			Debug.Log("this also works");
 			timeRunning = 0;
+			Debug.Log(timeRunning);
 		}
 		/*if (timeRunning == 0){
 			timeRunning = 1;

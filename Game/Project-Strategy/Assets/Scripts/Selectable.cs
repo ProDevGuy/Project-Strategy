@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.IO;
 using UnityEngine.UI;
 public class Selectable : MonoBehaviour {
     public bool hi;
@@ -9,10 +10,21 @@ public class Selectable : MonoBehaviour {
     public string name;
     public GameObject panel;
     public int selected;
+    public TextMesh provinceNameText;
+    public TextMesh provinceOwnerText;
+ 	public Text provinceNameTextUI;
+    public Text provinceOwnerTextUI;
+    public string Name;
+    string path;
+	string jsonString;
+    public Provinces Provinces;
     void Start()
     {
-
-
+        //Selectable[] selectabless = FindObjectsOfType(typeof(Selectable)) as Selectable[];
+        //foreach(Selectable str in selectabless)
+		//{
+		//	Debug.Log(str);
+		//}
         name = gameObject.name;
         //GameObject go = GameObject.Find("Canvas");
         //if (!go)
@@ -46,10 +58,28 @@ public class Selectable : MonoBehaviour {
                 if (hitInfo.transform.gameObject.name == name)
                 {
                     selected = 1;
+                    Debug.Log(name);
                     //Debug.Log("It's working!");
                     booltest.eraseRenderer = false;
                     //panel.enabled = true;
                     panel.SetActive(true);
+                    if(name == "Province ireland"){
+                        path = Application.streamingAssetsPath + "/Provinces/Ireland.json";
+                    }
+                    if(name == "Province wales"){
+                        path = Application.streamingAssetsPath + "/Provinces/Wales.json";
+                    }
+                    Debug.Log(path);
+                    jsonString = File.ReadAllText(path);
+                    Debug.Log(jsonString);
+                    Province IRELAND = JsonUtility.FromJson<Province>(jsonString);
+                    provinceNameText = provinceNameText.GetComponent<TextMesh>();
+                    provinceNameTextUI = provinceNameTextUI.GetComponent<Text>();
+                    provinceNameText.text = IRELAND.name;
+                    provinceNameTextUI.text = IRELAND.name;
+                    Debug.Log(provinceNameTextUI.text);
+                    Debug.Log(provinceNameText.text);
+                    Debug.Log(IRELAND.name);
                     //GetComponent<cakeslice.Outline>().enabled = true;
 
                     //Debug.Log("This works two");

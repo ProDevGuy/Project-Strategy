@@ -16,7 +16,7 @@ public class clicker : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            print("hit");
+            //print("hit");
             //We select province with Raycast
 
             /*float mousex = (Input.mousePosition.x * 550);
@@ -41,15 +41,15 @@ public class clicker : MonoBehaviour {
             float zoom = ZoomeCamera.cameraCurrentZoom;
             //Vector3 mousepos = new Vector3(mouseyb, mouseyb);
             // print(mousepos);
-            print(mouseyb.x * 200);
-            print((mouseyb.y * 42)*4.8);
+            //print(mouseyb.x * 200);
+            //print((mouseyb.y * 42)*4.8);
             float locx = mouseyb.x * 200;
             float locy = (mouseyb.y * 42) * 4.8f;
             int cordX = (int)(Mathf.FloorToInt(locx));
             int cordY = (int)(Mathf.FloorToInt(locy));
             //Color32 clickedProvinceColor = colorMapTex.GetPixelBilinear(locx, locy);
             Color32 clickedProvinceColor = colorMapTex.GetPixel(cordX, cordY);
-            print(clickedProvinceColor);
+            //print(clickedProvinceColor);
 
 
         }
