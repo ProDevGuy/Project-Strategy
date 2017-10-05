@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.IO;
 public class changeTime : MonoBehaviour {
 	public Text time;
 	int daInt = 1;
@@ -10,7 +10,17 @@ public class changeTime : MonoBehaviour {
 	string theText;
     //public int theTime;
 	public bool startSecond;
+	public Text descOfEvent;
+	public Text tittleOfEvent;
+	public Text option1OfEvent;
+	public Text option2OfEvent;
+	
+	string path;
+	string jsonString;
 	int theTextint;
+	string somestring;
+	//array[] somearry;
+	public string eventName;
 	public GameObject event1;
 	// Use this for initialization
 	void Start () {
@@ -40,7 +50,10 @@ public class changeTime : MonoBehaviour {
 			time.text = daInt.ToString();
 			if(time.text == "5" && startSecond == true){
 				Debug.Log("event 1 fires");
+				EventChecker();
+				EventChanger(eventName);
 				event1.SetActive(true);
+				timeRunning = 0;
 				startSecond = false;
 			}
 			
@@ -61,6 +74,25 @@ public class changeTime : MonoBehaviour {
 		/*if (timeRunning == 0){
 			timeRunning = 1;
 		}*/
+	}
+
+	public void EventChanger(string eventToGame){
+		/*foreach(somestring in somearry){
+			if (someString == "blah"){
+				return;
+			}
+		}*/
+		descOfEvent = descOfEvent.GetComponent<Text>();
+		descOfEvent.text = "event1_discription_placholder";
+	}
+
+	public void EventChecker(){
+		path = Application.streamingAssetsPath + "/Events/eventHandler.json";
+		jsonString = File.ReadAllText(path);
+		//Debug.Log(jsonString);
+		Event eventHolder = JsonUtility.FromJson<Event>(jsonString);
+
+		eventName = "";
 	}
 
 	

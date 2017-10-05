@@ -1143,6 +1143,11 @@ MonoBehaviour:
   time: {fileID: 2036006130}
   timeRunning: 1
   startSecond: 0
+  descOfEvent: {fileID: 426367862}
+  tittleOfEvent: {fileID: 1765600486}
+  option1OfEvent: {fileID: 1661873964}
+  option2OfEvent: {fileID: 1615102649}
+  eventName: 
   event1: {fileID: 538000849}
 --- !u!1 &354363114
 GameObject:
@@ -6101,6 +6106,11 @@ MonoBehaviour:
   time: {fileID: 2036006130}
   timeRunning: 1
   startSecond: 0
+  descOfEvent: {fileID: 0}
+  tittleOfEvent: {fileID: 0}
+  option1OfEvent: {fileID: 0}
+  option2OfEvent: {fileID: 0}
+  eventName: 
   event1: {fileID: 538000849}
 --- !u!1 &2045341265
 GameObject:

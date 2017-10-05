@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\changeTime.cs" />
      <Compile Include="Assets\Scripts\clicker.cs" />
+     <Compile Include="Assets\Scripts\events.cs" />
      <Compile Include="Assets\Scripts\initialization.cs" />
      <Compile Include="Assets\Scripts\MapZoom.cs" />
      <Compile Include="Assets\Scripts\Provinces.cs" />
