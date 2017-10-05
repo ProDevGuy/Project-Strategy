@@ -17,6 +17,7 @@ public class Selectable : MonoBehaviour {
     public string Name;
     string path;
 	string jsonString;
+    public List<string> provinceNames = new List<string>();
     public Provinces Provinces;
     void Start()
     {
@@ -31,7 +32,11 @@ public class Selectable : MonoBehaviour {
             //return;
 
         //panel = go.GetComponent<Image>();
-
+        /*string filePath = Application.streamingAssetsPath + "/Provinces/";
+		string[] files = System.IO.Directory.GetFiles(filePath);
+        for (int i = 0; i < files.Length; i++){
+            provinceNames.add(Province.)
+        }*/
         //Sets a var "g" to the current game object
         GameObject g = gameObject;
         //Debug.Log(g);
@@ -63,24 +68,8 @@ public class Selectable : MonoBehaviour {
                     booltest.eraseRenderer = false;
                     //panel.enabled = true;
                     panel.SetActive(true);
-                    if(name == "Province ireland"){
-                        path = Application.streamingAssetsPath + "/Provinces/Ireland.json";
-                    }
-                    if(name == "Province wales"){
-                        path = Application.streamingAssetsPath + "/Provinces/Wales.json";
-                    }
-                    if(name == "Province england"){
-                        path = Application.streamingAssetsPath + "/Provinces/England.json";
-                    }
-                    if(name == "Province wyoming"){
-                        path = Application.streamingAssetsPath + "/Provinces/Wyoming.json";
-                    }
-                    if(name == "Province colorado"){
-                        path = Application.streamingAssetsPath + "/Provinces/Colorado.json";
-                    }
-                    if(name == "Province greenland"){
-                        path = Application.streamingAssetsPath + "/Provinces/Greenland.json";
-                    }
+                    checkProvince(name);
+                    
                     Debug.Log(path);
                     jsonString = File.ReadAllText(path);
                     Debug.Log(jsonString);
@@ -115,4 +104,26 @@ public class Selectable : MonoBehaviour {
             //Debug.Log("Mouse is down");
         }
     }
+
+
+    void checkProvince(string provName){
+        if(provName == "Province ireland"){
+            path = Application.streamingAssetsPath + "/Provinces/Ireland.json";
+        }
+        if(provName == "Province wales"){
+            path = Application.streamingAssetsPath + "/Provinces/Wales.json";
+        }
+        if(provName == "Province england"){
+            path = Application.streamingAssetsPath + "/Provinces/England.json";
+        }
+        if(provName == "Province wyoming"){
+            path = Application.streamingAssetsPath + "/Provinces/Wyoming.json";
+        }
+        if(provName == "Province colorado"){
+            path = Application.streamingAssetsPath + "/Provinces/Colorado.json";
+        }
+        if(provName == "Province greenland"){
+            path = Application.streamingAssetsPath + "/Provinces/Greenland.json";
+        }
+    } 
 }

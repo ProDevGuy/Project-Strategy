@@ -8,10 +8,14 @@ public class changeTime : MonoBehaviour {
 	int daInt = 1;
 	public int timeRunning = 1;
 	string theText;
+    //public int theTime;
+	public bool startSecond;
 	int theTextint;
+	public GameObject event1;
 	// Use this for initialization
 	void Start () {
 		StartCoroutine( HandleIt() );
+		
 	}
 	
 	// Update is called once per frame
@@ -21,14 +25,26 @@ public class changeTime : MonoBehaviour {
 	}
 
 
+	
+
 	private IEnumerator HandleIt(){
 		if (timeRunning != 0){
+			startSecond = true;
 			theText = time.text;
 
 			int.TryParse(theText, out theTextint);
 			daInt = theTextint + 1;
-			yield return new WaitForSeconds(2f);
+			
+			
+			yield return new WaitForSeconds(1f);
 			time.text = daInt.ToString();
+			if(time.text == "5" && startSecond == true){
+				Debug.Log("event 1 fires");
+				event1.SetActive(true);
+				startSecond = false;
+			}
+			
+			startSecond = false;
 			StartCoroutine( HandleIt() );
 		}
 		
@@ -47,5 +63,6 @@ public class changeTime : MonoBehaviour {
 		}*/
 	}
 
+	
 	
 }

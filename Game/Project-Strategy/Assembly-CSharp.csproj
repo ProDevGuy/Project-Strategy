@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\buttonController.cs" />
      <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
      <Compile Include="Assets\Proprietarty Assets\OutlineEffect\Demo\OutlineAnimation.cs" />
      <Compile Include="Assets\Proprietarty Assets\OutlineEffect\Demo\Rotate.cs" />
@@ -76,12 +77,14 @@
      <Compile Include="Assets\Scripts\SelectionBox.cs" />
      <Compile Include="Assets\Scripts\spriteChanger.cs" />
      <Compile Include="Assets\Scripts\TextChanger.cs" />
+     <Compile Include="Assets\testscript.cs" />
      <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineShader.shader" />
      <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
      <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />
      <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineBufferCullOffShader.shader" />
      <None Include="Assets\Proprietarty Assets\Readme.txt" />
      <None Include="Assets\Proprietarty Assets\ToonSoldiers_WW2_demo\ToonSoldiers_WW2_demo_README.txt" />
+     <None Include="Assets\Materials\ireland.shader" />
      <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
