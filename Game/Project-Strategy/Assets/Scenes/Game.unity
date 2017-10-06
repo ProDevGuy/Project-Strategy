@@ -1147,6 +1147,7 @@ MonoBehaviour:
   tittleOfEvent: {fileID: 1765600486}
   option1OfEvent: {fileID: 1661873964}
   option2OfEvent: {fileID: 1615102649}
+  isPaused: 0
   eventName: 
   event1: {fileID: 538000849}
   eventNames: []
@@ -2190,8 +2191,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 738647957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 484, y: 225, z: 0}
-  m_LocalScale: {x: 0.951262, y: 0.951262, z: 0.951262}
+  m_LocalPosition: {x: 484, y: 223, z: 0}
+  m_LocalScale: {x: 0.9469994, y: 0.9469994, z: 0.9469994}
   m_Children:
   - {fileID: 386528788}
   - {fileID: 1371082736}
@@ -6101,7 +6102,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036006128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7946ca7f6c74d459fbc734aa3ad0d915, type: 3}
   m_Name: 
@@ -6113,6 +6114,7 @@ MonoBehaviour:
   tittleOfEvent: {fileID: 0}
   option1OfEvent: {fileID: 0}
   option2OfEvent: {fileID: 0}
+  isPaused: 0
   eventName: 
   event1: {fileID: 538000849}
   eventNames: []

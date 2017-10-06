@@ -1,0 +1,10 @@
+{
+    "id":1,
+    "name":"disasterrelief_name",
+    "time":5,
+    "eventTitle":"Disaster relief has arived!",
+    "eventOption1":"Thank them for their help, and rebuild the capital.",
+    "eventOption2":"We dont need help!",
+    "eventDisc":"Disaster relief from alot of countrys has been offered to us. What should we do?"
+
+}
