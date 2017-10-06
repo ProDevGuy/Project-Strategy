@@ -4,6 +4,9 @@
 ## Current Progress:
 
 1955 currently has the framework for a selectable province map, and events
+
+### Planed Features:
+See [Issues](https://github.com/EPrograming/Project-Strategy/issues) for planed features
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
