@@ -52,6 +52,12 @@ Please read [CONTRIBUTING.md](https://github.com/EPrograming/1955/blob/master/CO
 To Contribute, go to [Issues](https://github.com/EPrograming/1955/issues) to see what needs done.
 Or visit our trello [board](https://trello.com/b/djtV6J8C/project-strategy) to see what needs done.
 
+
+### To add provinces:
+Duplicate a current provinces, change the img for it, update the selectable.cs to add the province, and add the json file
+
+### To add events
+Duplicate a current event json file, and add the if statement to timeChanger.cs
 ###
 License
 
