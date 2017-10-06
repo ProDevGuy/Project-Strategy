@@ -19,7 +19,7 @@ public class events : MonoBehaviour
 
 	void loadJsonData()
 	{
-		string filePath = Application.streamingAssetsPath + "/Events/";
+		string filePath = Application.streamingAssetsPath + "/Events/gameEvents";
 		string[] files = System.IO.Directory.GetFiles(filePath);
 
 		for (int i = 0; i < files.Length; i++)

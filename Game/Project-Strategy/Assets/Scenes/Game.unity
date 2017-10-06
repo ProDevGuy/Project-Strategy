@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 334571180}
   - component: {fileID: 334571183}
   m_Layer: 5
-  m_Name: Button
+  m_Name: timeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1149,6 +1149,7 @@ MonoBehaviour:
   option2OfEvent: {fileID: 1615102649}
   eventName: 
   event1: {fileID: 538000849}
+  eventNames: []
 --- !u!1 &354363114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,8 +2190,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 738647957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 484, y: 223, z: 0}
-  m_LocalScale: {x: 0.9469994, y: 0.9469994, z: 0.9469994}
+  m_LocalPosition: {x: 484, y: 225, z: 0}
+  m_LocalScale: {x: 0.951262, y: 0.951262, z: 0.951262}
   m_Children:
   - {fileID: 386528788}
   - {fileID: 1371082736}
@@ -3466,6 +3467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90404d827731e4afc887b5e4c35ea2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeholder: {fileID: 334571178}
   testEvent: {fileID: 538000849}
 --- !u!1 &1115670754
 GameObject:
@@ -5702,6 +5704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90404d827731e4afc887b5e4c35ea2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeholder: {fileID: 334571178}
   testEvent: {fileID: 538000849}
 --- !u!1 &1932990879
 GameObject:
@@ -6112,6 +6115,7 @@ MonoBehaviour:
   option2OfEvent: {fileID: 0}
   eventName: 
   event1: {fileID: 538000849}
+  eventNames: []
 --- !u!1 &2045341265
 GameObject:
   m_ObjectHideFlags: 0

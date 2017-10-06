@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\buttonController.cs" />
      <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
      <Compile Include="Assets\Proprietarty Assets\OutlineEffect\Demo\OutlineAnimation.cs" />
      <Compile Include="Assets\Proprietarty Assets\OutlineEffect\Demo\Rotate.cs" />
@@ -65,6 +64,7 @@
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Planes\PlanesFactory.cs" />
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Planes\QuadtreeLODPlane.cs" />
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Utilities\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\buttonController.cs" />
      <Compile Include="Assets\Scripts\CameraControler.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\CameraZoom.cs" />
