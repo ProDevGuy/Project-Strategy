@@ -64,11 +64,13 @@
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Planes\PlanesFactory.cs" />
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Planes\QuadtreeLODPlane.cs" />
      <Compile Include="Assets\Proprietarty Assets\WorldMaps\Scripts\Utilities\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\buttonController.cs" />
      <Compile Include="Assets\Scripts\CameraControler.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\changeTime.cs" />
      <Compile Include="Assets\Scripts\clicker.cs" />
+     <Compile Include="Assets\Scripts\events.cs" />
      <Compile Include="Assets\Scripts\initialization.cs" />
      <Compile Include="Assets\Scripts\MapZoom.cs" />
      <Compile Include="Assets\Scripts\Provinces.cs" />
@@ -76,12 +78,14 @@
      <Compile Include="Assets\Scripts\SelectionBox.cs" />
      <Compile Include="Assets\Scripts\spriteChanger.cs" />
      <Compile Include="Assets\Scripts\TextChanger.cs" />
+     <Compile Include="Assets\testscript.cs" />
      <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineShader.shader" />
      <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
      <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />
      <None Include="Assets\Proprietarty Assets\OutlineEffect\Resources\OutlineBufferCullOffShader.shader" />
      <None Include="Assets\Proprietarty Assets\Readme.txt" />
      <None Include="Assets\Proprietarty Assets\ToonSoldiers_WW2_demo\ToonSoldiers_WW2_demo_README.txt" />
+     <None Include="Assets\Materials\ireland.shader" />
      <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>

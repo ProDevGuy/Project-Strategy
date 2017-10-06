@@ -1,0 +1,10 @@
+{
+    "id":1,
+    "name":"earthquake_name",
+    "time":5,
+    "eventTitle":"Earthquake!",
+    "eventOption1":"Send disaster releif now!",
+    "eventOption2":"They dont need any help",
+    "eventDisc":"An earthquake has stuck our capital. What whould we do?"
+
+}
