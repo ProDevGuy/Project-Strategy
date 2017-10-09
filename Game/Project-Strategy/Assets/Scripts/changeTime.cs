@@ -15,18 +15,21 @@ public class changeTime : MonoBehaviour {
 	public Text tittleOfEvent;
 	public Text option1OfEvent;
 	public Text option2OfEvent;
+	public bool isPaused = false;
 	bool eventReady = false;
 	string path;
 	string jsonString;
 	int timeint;
 	int theTextint;
-	
+	public int eventID;
 	
 	string somestring;
 	//array[] somearry;
 	public string eventName;
 	public GameObject event1;
 	public List<string> eventNames = new List<string>();
+	public List<int> eventIds = new List<int>();
+	int placeholderint;
 	// Use this for initialization
 	void Start () {
 		StartCoroutine( HandleIt() );
@@ -38,13 +41,18 @@ public class changeTime : MonoBehaviour {
 			if (files[i].EndsWith("json"))
 			{
 				//Debug.Log("Grabbing " + files[i]);
-				//string dataAsJson = File.ReadAllText(files[i]); // Read the json from the filePath into a string.
+				string dataAsJson = File.ReadAllText(files[i]); // Read the json from the filePath into a string.
 				//EventFromJson provinceData = JsonUtility.FromJson<EventFromJson>(dataAsJson); //Store that json into a provinceData struct.
 				daname = Path.GetFileName(files[i]);
 				daname = daname.Substring(0, daname.Length - 5);
+				CEvent eventData = JsonUtility.FromJson<CEvent>(dataAsJson); //Store that json into a provinceData struct.
+				placeholderint = eventData.id;
 				//Debug.Log(daname);
 				//Add a new Province object to the provinces List, giving it the JSON data grabbed from the aforementioned file.
 				eventNames.Add(daname);
+				eventIds.Add(placeholderint);
+				Debug.Log(placeholderint);
+
 			}
 			
 		}
@@ -53,39 +61,44 @@ public class changeTime : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		
+		//LoadJsonData();
 	}
 
 
 	
 
 	private IEnumerator HandleIt(){
-		if (timeRunning != 0){
-			startSecond = true;
-			theText = time.text;
-
-			int.TryParse(theText, out theTextint);
-			daInt = theTextint + 1;
-			
-			
-			yield return new WaitForSeconds(1f);
-			time.text = daInt.ToString();
-			EventChecker();
-			if(eventReady == true){
-				//Debug.Log("event 1 fires");
-				
-				EventChanger(eventName);
-				event1.SetActive(true);
-				timeRunning = 0;
-				startSecond = false;
-				eventReady = false;
-			}
-			
-			startSecond = false;
-			StartCoroutine( HandleIt() );
+		while (isPaused)
+		{
+			yield return null;
 		}
-		//yield return new WaitForSeconds(5f);
+		//if (timeRunning != 0){
+		startSecond = true;
+		theText = time.text;
+
+		int.TryParse(theText, out theTextint);
+		daInt = theTextint + 1;
 		
+		
+		yield return new WaitForSeconds(1f);
+		time.text = daInt.ToString();
+		EventChecker();
+		if(eventReady == true){
+			//Debug.Log("event 1 fires");
+			
+			EventChanger(eventName);
+			event1.SetActive(true);
+			timeRunning = 0;
+			startSecond = false;
+			eventReady = false;
+			isPaused = true;
+		}
+		
+		startSecond = false;
+		StartCoroutine( HandleIt() );
+		//}
+		//yield return new WaitForSeconds(1f);
+		//StartCoroutine( HandleIt() );
 		
 	}
 
@@ -128,16 +141,27 @@ public class changeTime : MonoBehaviour {
 		//Debug.Log(jsonString);
 		//Event eventHolder = JsonUtility.FromJson<Event>(jsonString);
 		CRoot root = JsonUtility.FromJson<CRoot>(jsonString);
-		Debug.Log(root.events[0].name);
-		eventName = "event1";
+		//Debug.Log(root.events[0].name);
+		//string eventstring = eventNames.RandomItem();
+		//eventName = root.events[].name;
 		//path = Application.streamingAssetsPath + "/Events/gameEvents/event1.json";
 		//&& startSecond == true
 		//root.events[0].time ="5" &&
+		
 		string timetext = time.text;
 		
 		int.TryParse(timetext, out timeint);
-		
-		if ( timeint == root.events[0].time ){
+		foreach(int str in eventIds)
+		{
+			//Debug.Log(str);
+			if ( timeint == root.events[str].time ){ //To add an event just add the json file and edit the eventHandler
+				if(startSecond = true){
+					eventReady = true;
+					path = Application.streamingAssetsPath + root.events[str].path;
+				}
+			}
+		}
+		/*if ( timeint == root.events[0].time ){ //Duplicate this function and change the events[0] to events[3] or whatever number is next, then add event in eventHandler and create event json file
 			if(startSecond = true){
 				eventReady = true;
 				path = Application.streamingAssetsPath + root.events[0].path;
@@ -148,10 +172,21 @@ public class changeTime : MonoBehaviour {
 				eventReady = true;
 				path = Application.streamingAssetsPath + root.events[1].path;
 			}
-		}
+		}*/
 	}
-
-	
+	//public Random rnd = new Random();
+	/*void LoadJsonData(){
+		string filePath = Application.streamingAssetsPath + "/Events/gameEvents/";
+		string[] files = System.IO.Directory.GetFiles(filePath);
+		
+		int i = Random.Range(0,1);
+		//Debug.Log("Grabbing " + files[i]);
+		string dataAsJson = File.ReadAllText(files[i]); // Read the json from the filePath into a string.
+		CEvent eventData = JsonUtility.FromJson<CEvent>(dataAsJson); //Store that json into a provinceData struct.
+		eventID = eventData.id;
+		//Add a new Province object to the provinces List, giving it the JSON data grabbed from the aforementioned file.
+		
+	}*/
 	
 }
 
@@ -169,3 +204,4 @@ public class changeTime : MonoBehaviour {
  {
      public CEvent[] events;
  }
+

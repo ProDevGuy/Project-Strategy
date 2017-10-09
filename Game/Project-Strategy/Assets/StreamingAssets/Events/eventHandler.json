@@ -2,14 +2,14 @@
     {
     
     	"events":[{
-    		"id":1,
+    		"id":0,
     		"name":"EVENT_1",
     	
 			"path":"/Events/gameEvents/event1.json",
 			"time":5
     		
     	},{
-    		"id":2,
+    		"id":1,
     		"name":"EVENT_2",
     	
 			"path":"/Events/gameEvents/event2.json"	,

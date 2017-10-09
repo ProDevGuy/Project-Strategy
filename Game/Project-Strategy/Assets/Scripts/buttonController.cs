@@ -21,6 +21,7 @@ public class buttonController : MonoBehaviour {
 	}
 	public void test() {
 		testEvent.SetActive(false);
-		changetime.timeRunning = 1;
+		changetime.isPaused = false;
+		//Debug.Log(changetime.isPaused);
 	}
 }
