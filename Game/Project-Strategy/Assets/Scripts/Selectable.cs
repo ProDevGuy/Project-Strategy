@@ -19,22 +19,47 @@ public class Selectable : MonoBehaviour {
 	string jsonString;
     public List<string> provinceNames = new List<string>();
     public Provinces Provinces;
+    
+    public GameObject ProvincesHolder;
     void Start()
     {
+        
+        
         //Selectable[] selectabless = FindObjectsOfType(typeof(Selectable)) as Selectable[];
         //foreach(Selectable str in selectabless)
 		//{
 		//	Debug.Log(str);
 		//}
+        string daname;
         name = gameObject.name;
         //GameObject go = GameObject.Find("Canvas");
         //if (!go)
             //return;
 
         //panel = go.GetComponent<Image>();
-        /*string filePath = Application.streamingAssetsPath + "/Provinces/";
+        string filePath = Application.streamingAssetsPath + "/Provinces/";
 		string[] files = System.IO.Directory.GetFiles(filePath);
-        for (int i = 0; i < files.Length; i++){
+        for (int i = 0; i < files.Length; i++)
+		{
+			if (files[i].EndsWith("json"))
+			{
+				//Debug.Log("Grabbing " + files[i]);
+				string dataAsJson = File.ReadAllText(files[i]); // Read the json from the filePath into a string.
+				//EventFromJson provinceData = JsonUtility.FromJson<EventFromJson>(dataAsJson); //Store that json into a provinceData struct.
+				//daname = Path.GetFileName(files[i]);
+				//daname = daname.Substring(0, daname.Length - 5);
+				CProv provData = JsonUtility.FromJson<CProv>(dataAsJson); //Store that json into a provinceData struct.
+				daname = provData.name;
+				//Debug.Log(daname);
+				//Add a new Province object to the provinces List, giving it the JSON data grabbed from the aforementioned file.
+				provinceNames.Add(daname);
+				//eventIds.Add(placeholderint);
+				//Debug.Log(placeholderint);
+
+			}
+			
+		}
+        /*for (int i = 0; i < files.Length; i++){
             provinceNames.add(Province.)
         }*/
         //Sets a var "g" to the current game object
@@ -105,8 +130,21 @@ public class Selectable : MonoBehaviour {
         }
     }
 
-
+    
     void checkProvince(string provName){
+        path = Application.streamingAssetsPath + "/provinceController.json";
+		jsonString = File.ReadAllText(path);
+		CRootProv root = JsonUtility.FromJson<CRootProv>(jsonString);
+        //var provs;
+        
+        
+        /*foreach(int str in Provinces.provints)
+		{
+			//Debug.Log(str);
+			if(provName == root.provinces[str].name){
+                path = Application.streamingAssetsPath + root.provinces[str].path;
+            }
+		}*/
         if(provName == "Province ireland"){
             path = Application.streamingAssetsPath + "/Provinces/Ireland.json";
         }
@@ -125,5 +163,23 @@ public class Selectable : MonoBehaviour {
         if(provName == "Province greenland"){
             path = Application.streamingAssetsPath + "/Provinces/Greenland.json";
         }
+        if(provName == "Province michigan"){
+            path = Application.streamingAssetsPath + "/Provinces/Michigan.json";
+        }
     } 
 }
+[System.Serializable]
+ public class CProv
+ {
+     public int id;
+     public string name;
+     public string path;
+	 public int time;
+ }
+ 
+ [System.Serializable]
+ public class CRootProv
+ {
+     
+     public CProv[] provinces;
+ }

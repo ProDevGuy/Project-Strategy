@@ -19,20 +19,53 @@ public class initialization : MonoBehaviour {
 	public Text provinceNameTextUI;
 	public Text provinceOwnerTextUI;
 	public GameObject camera;
+	public Image countryFlag;
 	List<string> selection;
 	List<int> provIds = new List<int>();
 	int daInt = 1;
 	//public int timeRunning = 1;
 	string theText;
+	public string Country_Name;
 	public string jsonText;
+	public GameObject countryselect;
+	public GameObject timeholder;
 	int theTextint;
+	public Text countryNameTextUI;
+	public Text countryMoneyText;
+	public Text countryMenText;
+	public Sprite ukflag;
+	public Sprite usflag;
+	changeTime changetime;
 	//public Aprovince[] provinces;
 	// Use this for initialization
 	void Start () {
 		//StartCoroutine( HandleIt() );
 		//Load();
-		Provinces provinces = camera.GetComponent<Provinces>();
+		PlayerPrefs.SetString("countryName", "United_Kingdom"); //For testing
+		changetime = timeholder.GetComponent<changeTime>();
 		
+		
+		Provinces provinces = camera.GetComponent<Provinces>();
+		checkCountry();
+		countryNameTextUI = countryNameTextUI.GetComponent<Text>();
+		countryMoneyText = countryMoneyText.GetComponent<Text>();
+		countryMenText = countryMenText.GetComponent<Text>();
+		Debug.Log(path);
+		jsonString = File.ReadAllText(path);
+		Country test = JsonUtility.FromJson<Country>(jsonString);
+		countryNameTextUI.text = test.name;
+		float tostr = test.money;
+		countryMoneyText.text = tostr.ToString();
+		int inttostr = test.manpower;
+		countryMenText.text = inttostr.ToString();
+		/*countryNameTextUI = countryNameTextUI.GetComponent<Text>();
+		countryMoneyText = countryMoneyText.GetComponent<Text>();
+		Debug.Log(path);
+		jsonString = File.ReadAllText(path);
+		Country test = JsonUtility.FromJson<Country>(jsonString);
+		countryNameTextUI.text = test.name;
+		float tostr = test.money;
+		countryMoneyText.text = tostr.ToString();*/
 		provIds.Add(1);
 		provIds.Add(2);
 		provIds.Add(3);
@@ -40,7 +73,7 @@ public class initialization : MonoBehaviour {
 		provIds.Add(5);
 		provIds.Add(6);
 		provIds.Add(7);
-		addtoArray("test");
+		//addtoArray("test");
 		
 		/*path = Application.streamingAssetsPath + "/Provinces/Provinces.json";
 		jsonString = File.ReadAllText(path);
@@ -53,14 +86,13 @@ public class initialization : MonoBehaviour {
 		
 		JsonUtility.FromJsonOverwrite (jsonText, myprovinceStatsList);
 		Debug.Log(jsonText);
+		
+		//countryFlag = countryFlag.GetComponent<Image>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-		
-			/*theText = province.text;
-*/
+		//checkCountry();
 		
 		
 	}
@@ -86,9 +118,9 @@ public class initialization : MonoBehaviour {
 		
 	}*/
 
-	void addtoArray(string toAdd){
-		selection.Add(toAdd);
-	}
+	//void addtoArray(string toAdd){
+	//	selection.Add(toAdd);
+	//}
 
 	/*private IEnumerator HandleIt(){
 		
@@ -104,6 +136,33 @@ public class initialization : MonoBehaviour {
 		
 	}
 	*/
+	void checkCountry(){
+		//changetime.isPaused = true;
+        //path = Application.streamingAssetsPath + "/provinceController.json";
+		//jsonString = File.ReadAllText(path);
+		//CRootProv root = JsonUtility.FromJson<CRootProv>(jsonString);
+        //var provs;
+        
+        
+        /*foreach(int str in Provinces.provints)
+		{
+			//Debug.Log(str);
+			if(provName == root.provinces[str].name){
+                path = Application.streamingAssetsPath + root.provinces[str].path;
+            }
+		}*/
+        if(PlayerPrefs.GetString("countryName") == "United_Kingdom"){
+            path = Application.streamingAssetsPath + "/Countrys/uk.json";
+			GetComponent<Image>().sprite = ukflag;
+        }
+		if(PlayerPrefs.GetString("countryName") == "United_States"){
+            path = Application.streamingAssetsPath + "/Countrys/us.json";
+			GetComponent<Image>().sprite = usflag;
+        }
+		
+        
+    }
+	
 
 	
 

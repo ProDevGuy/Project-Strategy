@@ -1,0 +1,32 @@
+{
+    
+    	"provinces":[{
+    		"id":0,
+    		"name":"Colorado",
+    	
+			"path":"/Provinces/Colorado.json"
+			
+    		
+    	},{
+    		"id":1,
+    		"name":"England",
+    	
+			"path":"/Provinces/England.json"
+			
+    		
+    	},{
+    		"id":2,
+    		"name":"Greenland",
+    	
+			"path":"/Provinces/Greenland.json"
+			
+    		
+    	},{
+    		"id":3,
+    		"name":"Ireland",
+    	
+			"path":"/Provinces/Ireland.json"
+			
+    		
+    	}]
+    }

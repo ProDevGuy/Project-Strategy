@@ -8,7 +8,10 @@ public class Provinces : MonoBehaviour
 	/*This is the list of provinces, you can't access them as individually named objects anymore (for the sake of making the code modular) but you can
 	search through the list and check, for example, if provinces.name == "Ireland" exists, and then return that Province object.*/
 	public List<Province> provinces = new List<Province>();
+	public List<int> provints = new List<int>();
 	public static Provinces Instance;
+	string placeholderstring;
+	int placeholderint;
 	void Awake(){
 		Instance = this;
 	}
@@ -32,6 +35,10 @@ public class Provinces : MonoBehaviour
 
 				//Add a new Province object to the provinces List, giving it the JSON data grabbed from the aforementioned file.
 				provinces.Add(new Province(provinceData.name, new float[] {provinceData.R, provinceData.G, provinceData.B}, provinceData.terrain_type, provinceData.prosperity, provinceData.owner));
+				
+				placeholderstring = provinceData.id;
+				int.TryParse(placeholderstring, out placeholderint);
+				provints.Add(placeholderint);			
 			}
 			
 		}

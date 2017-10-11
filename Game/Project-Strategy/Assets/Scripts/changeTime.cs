@@ -104,10 +104,12 @@ public class changeTime : MonoBehaviour {
 
 	public void StartStopTime(){
 		Debug.Log("this works");
-		if (timeRunning == 1){
+		if (isPaused == false){
 			//Debug.Log("this also works");
-			timeRunning = 0;
+			isPaused = true;
 			//Debug.Log(timeRunning);
+		}else{
+			isPaused = false;
 		}
 		/*if (timeRunning == 0){
 			timeRunning = 1;
@@ -161,18 +163,7 @@ public class changeTime : MonoBehaviour {
 				}
 			}
 		}
-		/*if ( timeint == root.events[0].time ){ //Duplicate this function and change the events[0] to events[3] or whatever number is next, then add event in eventHandler and create event json file
-			if(startSecond = true){
-				eventReady = true;
-				path = Application.streamingAssetsPath + root.events[0].path;
-			}
-		}
-		if (timeint == root.events[1].time ){
-			if(startSecond = true){
-				eventReady = true;
-				path = Application.streamingAssetsPath + root.events[1].path;
-			}
-		}*/
+	
 	}
 	//public Random rnd = new Random();
 	/*void LoadJsonData(){

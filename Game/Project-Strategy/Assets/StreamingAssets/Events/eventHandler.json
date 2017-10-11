@@ -14,5 +14,11 @@
     	
 			"path":"/Events/gameEvents/event2.json"	,
 			"time":10
+    	},{
+    		"id":2,
+    		"name":"EVENT_3",
+    	
+			"path":"/Events/gameEvents/event3.json"	,
+			"time":20
     	}]
     }
