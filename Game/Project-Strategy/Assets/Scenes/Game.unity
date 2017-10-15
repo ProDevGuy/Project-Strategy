@@ -671,7 +671,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &223024628
 GameObject:
@@ -1162,6 +1162,7 @@ MonoBehaviour:
   timeholder: {fileID: 0}
   countryNameTextUI: {fileID: 0}
   countryMoneyText: {fileID: 0}
+  countryMenText: {fileID: 0}
   ukflag: {fileID: 21300000, guid: 839a10d487e5c45b7897c1647ab4bdce, type: 3}
   usflag: {fileID: 0}
 --- !u!1 &328505253
@@ -1577,7 +1578,7 @@ Transform:
   - {fileID: 890502597}
   - {fileID: 1460632924}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &386528787
 GameObject:
@@ -2462,6 +2463,7 @@ MonoBehaviour:
   timeholder: {fileID: 334571178}
   countryNameTextUI: {fileID: 2114690294}
   countryMoneyText: {fileID: 630504976}
+  countryMenText: {fileID: 0}
   ukflag: {fileID: 21300000, guid: 839a10d487e5c45b7897c1647ab4bdce, type: 3}
   usflag: {fileID: 0}
 --- !u!1 &733436500
@@ -3646,8 +3648,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1001465875}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.75, y: 8.19, z: 4.0039062}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.7500005, y: 8.19, z: 4.0039062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 328505254}
@@ -3658,7 +3660,7 @@ Transform:
   - {fileID: 1371668404}
   - {fileID: 215872145}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1008505473
 GameObject:
