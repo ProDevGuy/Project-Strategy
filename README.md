@@ -1,4 +1,4 @@
-# 1955 v0.0.4
+# 1955 v0.0.5
 1955 is an open source 4X Strategy game made in Unity3D. 1955 takes place in the Cold War era (game starts 1955), were American and her allies must defend agaist the threat of communism from the soviet union. Play as one of the main cold war players including but not limited to; USA, Soviet Union, France, Germanys, Britain, and more. 
 
 ## Current Progress:
