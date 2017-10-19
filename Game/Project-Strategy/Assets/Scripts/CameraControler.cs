@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class CameraControler : MonoBehaviour {
     
-    private Vector3 ResetCamera;
-    private Vector3 Origin;
-    private Vector3 Diference;
-    private bool Drag = false;
+    private Vector3 ResetCamera; //the location the camera resets to
+    private Vector3 Origin; //orign point of the camera
+    private Vector3 Diference; //difference between mouse pos and camera pos
+    private bool Drag = false; //wether the camera is being dragged
     
     void Start()
     {
-        ResetCamera = Camera.main.transform.position;
+        ResetCamera = Camera.main.transform.position; //Sets the reset location of the camera
     }
 
 
@@ -18,23 +18,23 @@ public class CameraControler : MonoBehaviour {
     {
       
 
-        
+        //If button 2 is pressed
         if (Input.GetMouseButton(2))
         {
-            Diference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - Camera.main.transform.position;
-            if (Drag == false)
+            Diference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - Camera.main.transform.position; //Sets difference var to the difference between mouse pos and camera
+            if (Drag == false) //if not dragging
             {
-                Drag = true;
-                Origin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Drag = true; 
+                Origin = Camera.main.ScreenToWorldPoint(Input.mousePosition); //Set origin point of camera
             }
         }
         else
         {
-            Drag = false;
+            Drag = false; 
         }
-        if (Drag == true)
+        if (Drag == true)//if dragging
         {
-            Camera.main.transform.position = Origin - Diference;
+            Camera.main.transform.position = Origin - Diference; //moves the camera by the amount in the difference var
         }
         //RESET CAMERA TO STARTING POSITION WITH RIGHT CLICK
         if (Input.GetMouseButton(1))
