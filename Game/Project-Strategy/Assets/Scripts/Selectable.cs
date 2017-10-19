@@ -5,36 +5,29 @@ using System;
 using System.IO;
 using UnityEngine.UI;
 public class Selectable : MonoBehaviour {
-    public bool hi;
-    public cakeslice.Outline booltest;
-    public string name;
-    public GameObject panel;
-    public int selected;
-    public TextMesh provinceNameText;
-    public TextMesh provinceOwnerText;
- 	public Text provinceNameTextUI;
-    public Text provinceOwnerTextUI;
-    public string Name;
-    string path;
-	string jsonString;
-    public List<string> provinceNames = new List<string>();
-    public Provinces Provinces;
+    public bool hi; //test bool [DEPRECIATED]
+    public cakeslice.Outline booltest; //The script which creates a outline of a province
+    public string name; //Name of this gameobject
+    public GameObject panel; //the panel which shows the province info
+    public int selected; //wether or not the prov is selected [TO BE DEPRECATED]
+    public TextMesh provinceNameText; //The text gamemobject which shows the province name
+    public TextMesh provinceOwnerText; //The text gameobject which shows the province owner [DEPRECEATED]
+    public Text provinceNameTextUI; //The UI which shows the name of the province in the panel
+    public Text provinceOwnerTextUI; //The UI which shows the owner of the province in the panel
+    public string Name; //[DEPRECEATED]
+    string path; //The path to the json file
+    string jsonString; //a string variable which contains the plain text from the json file
+    public List<string> provinceNames = new List<string>(); //list of all the province names
+    public Provinces Provinces; //the scripted "Provinces"
     
-    public GameObject ProvincesHolder;
+    public GameObject ProvincesHolder; //gameobject which holds the provinces script
     void Start()
     {
         
         
-        //Selectable[] selectabless = FindObjectsOfType(typeof(Selectable)) as Selectable[];
-        //foreach(Selectable str in selectabless)
-		//{
-		//	Debug.Log(str);
-		//}
-        string daname;
-        name = gameObject.name;
-        //GameObject go = GameObject.Find("Canvas");
-        //if (!go)
-            //return;
+        
+        string daname; //name variable [TO BE RENAMED]
+        name = gameObject.name; //sets the "name" variable to the gameobjects name
 
         //panel = go.GetComponent<Image>();
         string filePath = Application.streamingAssetsPath + "/Provinces/";
@@ -66,8 +59,8 @@ public class Selectable : MonoBehaviour {
         GameObject g = gameObject;
         //Debug.Log(g);
         //Gets bool from script: Outline.cs
-        booltest = g.GetComponent<cakeslice.Outline>();
-        booltest.eraseRenderer = true;
+        booltest = g.GetComponent<cakeslice.Outline>(); //enables the outline of the provinces
+        booltest.eraseRenderer = true; //same as above
        // Debug.Log(booltest);
         //Debug.Log("This may work");
     }
@@ -95,6 +88,7 @@ public class Selectable : MonoBehaviour {
                     panel.SetActive(true);
                     checkProvince(name);
                     
+		    //The folowing lines set the UI and TEXT gameobject's text to what the json file said	
                     Debug.Log(path);
                     jsonString = File.ReadAllText(path);
                     Debug.Log(jsonString);
@@ -111,7 +105,7 @@ public class Selectable : MonoBehaviour {
 
                     //Debug.Log("This works two");
                 }
-                else
+                else //If hit something else
                 {
                   //Debug.Log("nopz");
                   booltest.eraseRenderer = true;
@@ -119,7 +113,7 @@ public class Selectable : MonoBehaviour {
                   panel.SetActive(true);
                 }
             }
-            else
+            else //if did not hit anything at all
             {
                 //Debug.Log("No hit");
                 booltest.eraseRenderer = true;
@@ -131,7 +125,7 @@ public class Selectable : MonoBehaviour {
     }
 
     
-    void checkProvince(string provName){
+    void checkProvince(string provName){ //Check which province's path should be used
         path = Application.streamingAssetsPath + "/provinceController.json";
 		jsonString = File.ReadAllText(path);
 		CRootProv root = JsonUtility.FromJson<CRootProv>(jsonString);
@@ -145,6 +139,7 @@ public class Selectable : MonoBehaviour {
                 path = Application.streamingAssetsPath + root.provinces[str].path;
             }
 		}*/
+	//The folowing lines should be removed and replaced with a foreach loop like the one above [HIGH PRIORITY]
         if(provName == "Province ireland"){
             path = Application.streamingAssetsPath + "/Provinces/Ireland.json";
         }
@@ -168,15 +163,17 @@ public class Selectable : MonoBehaviour {
         }
     } 
 }
+
+//The class which holds the province data
 [System.Serializable]
- public class CProv
+ public class CProv 
  {
      public int id;
      public string name;
      public string path;
 	 public int time;
  }
- 
+ //the class which compiles the class above
  [System.Serializable]
  public class CRootProv
  {
